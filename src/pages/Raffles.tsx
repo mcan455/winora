@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import BottomNav from "../components/BottomNav";
 
 interface RaffleCardProps {
@@ -159,7 +159,16 @@ export default function Raffles() {
     <div className="min-h-screen bg-neutral-100 text-gray-900 flex flex-col items-center p-6 font-sans tracking-tight pb-20">
       <h1 className="text-3xl font-bold mb-6">Active Raffles</h1>
       {raffles.map((r, i) => (
-        <RaffleCard key={i} {...r} />
+        <RaffleCard
+  key={i}
+  title={r.title}
+  reward={r.reward}
+  participants={r.participants}
+  maxParticipants={r.maxParticipants}
+  status={r.status as "active" | "passive"}
+  endTime={r.endTime}
+  winnerName={r.winnerName}
+/>
       ))}
       <BottomNav />
     </div>
