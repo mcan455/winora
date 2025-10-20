@@ -1,0 +1,18 @@
+{
+  "accountAssociation": {
+    "header": "eyJmaWQiOjc5NzYxOSwidHlwZSI6ImN1c3RvZHkiLCJrZXkiOiIweDA3Mzc4NmRENTAwMjQxRDAzNDExQzkwRWExMjcxMjZlNDQxYkY0Y0EifQ",
+    "payload": "eyJkb21haW4iOiJrYXRoaWUtb3ZlcmxhdmlzaC1reXVuZy5uZ3Jvay1mcmVlLmRldiJ9",
+    "signature": "IeBAUmuaZkc7qVsOkOc/mvyMz2q4Ax/KgdTBRv95nmJgXXxcQLWK3AM5XLK+Ig0FWenSPnIRuVCwTG/HRFeuMRw="
+  },
+  "frame": {
+    "version": "1",
+    "name": "Winora",
+    "iconUrl": "https://kathie-overlavish-kyung.ngrok-free.dev/logo.png",
+    "homeUrl": "https://kathie-overlavish-kyung.ngrok-free.dev",
+    "buttonTitle": "Open MiniApp",
+    "splashImageUrl": "https://kathie-overlavish-kyung.ngrok-free.dev/logo.png",
+    "splashBackgroundColor": "#ffffff",
+    "webhookUrl": "https://kathie-overlavish-kyung.ngrok-free.dev/api/webhook"
+  }
+}
+
