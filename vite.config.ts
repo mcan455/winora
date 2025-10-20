@@ -3,15 +3,11 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: "./",
+  base: "/", // ⬅️ Farcaster embed için mutlaka "/" olmalı
   server: {
-    port: 5173,
     host: "0.0.0.0",
-    cors: {
-      origin: "*",
-      methods: ["GET", "POST", "OPTIONS"],
-      allowedHeaders: ["Content-Type", "Authorization"],
-    },
+    port: 5173,
+    cors: true, // basitleştirildi
     headers: {
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
