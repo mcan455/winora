@@ -1,23 +1,5 @@
-import { Address } from "viem";
+import raffleABI from "@/config/raffleABI.json";
 
-export const CONTRACT_ADDRESS: Address =
-  "0xYourContractAddressHere"; // ← buraya kontrat adresin gelecek (Base testnet veya mainnet)
-export const CONTRACT_ABI = [
-  {
-    name: "getPastWinners",
-    type: "function",
-    stateMutability: "view",
-    inputs: [],
-    outputs: [
-      {
-        components: [
-          { name: "username", type: "string" },
-          { name: "wallet", type: "address" },
-          { name: "amount", type: "uint256" },
-        ],
-        name: "",
-        type: "tuple[]",
-      },
-    ],
-  },
-];
+export const CONTRACT_ADDRESS = "0x6c560712b162e59ABCC6F1eB036A126035D4Af81";
+
+export const CONTRACT_ABI = raffleABI;

@@ -1,10 +1,10 @@
-{
+"frame": {
+  "version": "1",
   "name": "Winora",
-  "description": "A transparent random raffle platform for fair draws and giveaways.",
   "iconUrl": "https://winora-ivory.vercel.app/logo.png",
-  "developer": "Mehmet Can Bige",
-  "websiteUrl": "https://winora-ivory.vercel.app",
-  "appUrl": "https://winora-ivory.vercel.app",
-  "version": "1.0.0"
+  "homeUrl": "https://winora-ivory.vercel.app",
+  "imageUrl": "https://winora-ivory.vercel.app/image.png",
+  "buttonTitle": "Open MiniApp",
+  "webhookUrl": "https://winora-ivory.vercel.app/api/webhook"
 }
 

@@ -1,24 +1,32 @@
-// api/frame.ts
-import type { VercelRequest, VercelResponse } from '@vercel/node'
+import type { VercelRequest, VercelResponse } from "@vercel/node";
+import { CONTRACT_ADDRESS } from "../src/config/contract";
 
 export default function handler(req: VercelRequest, res: VercelResponse) {
-  const baseUrl = "https://winora-ivory.vercel.app" // kendi domainin
-  res.setHeader("Content-Type", "text/html")
-  res.status(200).send(`
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <meta property="og:title" content="Winora Raffles 🏆" />
-        <meta property="og:description" content="Katıl, kazan, liderlik tablosunda yerini al!" />
-        <meta property="og:image" content="${baseUrl}/og-image.png" />
-        <meta property="fc:frame" content="vNext" />
-        <meta property="fc:frame:image" content="${baseUrl}/frame-preview.png" />
-        <meta property="fc:frame:button:1" content="🎟️ Enter Raffle" />
-        <meta property="fc:frame:button:1:action" content="post" />
-        <meta property="fc:frame:post_url" content="${baseUrl}/api/raffle-entry" />
-      </head>
-      <body></body>
-    </html>
-  `)
-}
+  const frameMetadata = {
+    name: "Winora Raffle 🎟️",
+    description: "Join raffles and win USDC prizes on Base!",
+    image: "https://winora-ivory.vercel.app/logo.png",
+    buttons: [
+      {
+        label: "🎟️ Join Raffle",
+        action: "tx",
+        target: "https://winora-ivory.vercel.app/api/join",
+      },
+      {
+        label: "💰 Claim Rewards",
+        action: "tx",
+        target: "https://winora-ivory.vercel.app/api/claim",
+      },
+      {
+        label: "🏆 View Winners",
+        action: "link",
+        target: "https://winora-ivory.vercel.app/winners",
+      },
+    ],
+    version: "1.0.0",
+    chain: "base",
+    contractAddress: CONTRACT_ADDRESS,
+  };
 
+  res.status(200).json(frameMetadata);
+}
